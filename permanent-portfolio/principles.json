@@ -1,0 +1,46 @@
+{
+  "book": "permanent-portfolio",
+  "title": "永久组合 (Harry Browne)",
+  "source": "Fail-Safe Investing (1999)",
+  "core_principles": [
+    {
+      "id": "PP-01",
+      "name": "25/25/25/25 等权重",
+      "summary": "股票 + 长期国债 + 现金 + 黄金 各 25%, 对所有经济环境中立",
+      "trigger_keywords": ["配置", "比例", "权重", "再平衡", "reb"],
+      "holding_signal": "任一资产偏离 25% → 卖出/买入"
+    },
+    {
+      "id": "PP-02",
+      "name": "35/15 再平衡规则",
+      "summary": "任一资产 > 35% 卖出, < 15% 买入. 每季度机械执行",
+      "trigger_keywords": ["再平衡", "rebalance", "偏离", "35", "15"],
+      "holding_signal": "持仓触发阈值 → 立即再平衡"
+    },
+    {
+      "id": "PP-03",
+      "name": "不预测, 不择时",
+      "summary": "承认无知, 通过分散消除择时需求",
+      "trigger_keywords": ["预测", "择时", "时机", "forecast"],
+      "holding_signal": "市场狂热/恐慌 → 不操作, 维持原配置"
+    },
+    {
+      "id": "PP-04",
+      "name": "相关性低的 4 类资产",
+      "summary": "任一经济环境都有至少 1 类表现良好",
+      "trigger_keywords": ["相关性", "经济环境", "滞胀", "衰退"],
+      "holding_signal": "宏观剧变 → 4 类资产都有理由存在"
+    },
+    {
+      "id": "PP-05",
+      "name": "现金是衰退保险",
+      "summary": "现金在衰退期表现最佳, 不只是等待机会的成本",
+      "trigger_keywords": ["现金", "衰退", "recession", "余额宝"],
+      "holding_signal": "现金 < 25% → 补仓; 现金 > 35% → 减仓转权益"
+    }
+  ],
+  "daily_prompts": [
+    "今天持仓的 4 类资产权重是多少? 是否触发 35/15?",
+    "当前宏观环境属于 4 种之一 (增长/通胀/通缩/衰退)? 哪类资产受益?"
+  ]
+}

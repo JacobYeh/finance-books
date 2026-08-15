@@ -1,0 +1,54 @@
+{
+  "book": "buffett-letters",
+  "title": "巴菲特致股东信",
+  "source": "Berkshire Hathaway Shareholder Letters (1977-2023)",
+  "core_principles": [
+    {
+      "id": "BUF-01",
+      "name": "买企业不买股票",
+      "summary": "内在价值 = 未来 10-20 年自由现金流折现",
+      "trigger_keywords": ["内在价值", "intrinsic", "现金流", "DCF"],
+      "holding_signal": "价格 < 内在价值 70% → 加仓"
+    },
+    {
+      "id": "BUF-02",
+      "name": "Margin of safety",
+      "summary": "只在内在价值 50-70% 区间买入, 留安全边际",
+      "trigger_keywords": ["安全边际", "margin of safety", "折扣"],
+      "holding_signal": "大幅回调 → 检查是否进入安全边际"
+    },
+    {
+      "id": "BUF-03",
+      "name": "别人恐惧时贪婪",
+      "summary": "市场恐慌 = 机会; 市场狂热 = 风险",
+      "trigger_keywords": ["恐惧", "贪婪", "恐慌", "fomo"],
+      "holding_signal": "VIX > 30 / 暴跌 → 反而加仓机会"
+    },
+    {
+      "id": "BUF-04",
+      "name": "能力圈内投资",
+      "summary": "只投能理解的企业. 不懂的 → 指数基金",
+      "trigger_keywords": ["能力圈", "circle of competence", "理解"],
+      "holding_signal": "不理解的标的 → 减仓/换指数"
+    },
+    {
+      "id": "BUF-05",
+      "name": "长期持有 + 不择时",
+      "summary": "频繁交易 = 高费用 + 错失复利. 永远持有最优",
+      "trigger_keywords": ["持有", "复利", "长期", "forever"],
+      "holding_signal": "短期波动 → 不操作"
+    },
+    {
+      "id": "BUF-06",
+      "name": "低费率指数基金最优",
+      "summary": "80% 人 → 标普/纳指指数. 0.1% 费率差异 = 30 年 3% 收益差",
+      "trigger_keywords": ["费率", "expense", "指数", "index"],
+      "holding_signal": "持仓费率 > 0.5% → 考虑替换更便宜的同类"
+    }
+  ],
+  "daily_prompts": [
+    "当前持仓是否在我的能力圈内? 个股/私募是否有?",
+    "费率最高的 3 只基金是什么? 是否值得替换?",
+    "今天大跌/大涨是恐惧还是贪婪? 我应该反向还是跟随?"
+  ]
+}

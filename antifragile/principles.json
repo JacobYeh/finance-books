@@ -1,0 +1,46 @@
+{
+  "book": "antifragile",
+  "title": "反脆弱 (Nassim Taleb)",
+  "source": "Antifragile (2012)",
+  "core_principles": [
+    {
+      "id": "ANT-01",
+      "name": "杠铃策略 (90/10)",
+      "summary": "90% 极保守 + 10% 高风险. 避免中庸",
+      "trigger_keywords": ["杠铃", "barbell", "集中", "保守"],
+      "holding_signal": "中等风险配置 → 重新分配极端两极"
+    },
+    {
+      "id": "ANT-02",
+      "name": "否定法优先",
+      "summary": "先想最坏亏损多少, 再想收益. 避免 > 追逐",
+      "trigger_keywords": ["下行", "亏损", "风险", "drawdown"],
+      "holding_signal": "杠杆/集中/不可逆仓位 → 减"
+    },
+    {
+      "id": "ANT-03",
+      "name": "可选择性 (option-like)",
+      "summary": "有限下行 + 不对称上行 = 反脆弱. 优于预测",
+      "trigger_keywords": ["期权", "不对称", "option"],
+      "holding_signal": "下行有限 + 上行大 → 加仓"
+    },
+    {
+      "id": "ANT-04",
+      "name": "反脆弱 = 从波动获益",
+      "summary": "减少脆弱项 + 增加反脆弱项",
+      "trigger_keywords": ["波动", "volatility", "脆弱"],
+      "holding_signal": "波动期 → 反脆弱仓位应得益"
+    },
+    {
+      "id": "ANT-05",
+      "name": "美元强弱 → 黄金反向",
+      "summary": "美元强 = 黄金弱 / 美元弱 = 黄金强",
+      "trigger_keywords": ["美元", "DXY", "黄金", "gold"],
+      "holding_signal": "DXY 走强 → 减黄金; DXY 走弱 → 增黄金"
+    }
+  ],
+  "daily_prompts": [
+    "我今天有没有加杠杆 / 集中单只 > 5%? 是否违反否定法?",
+    "黄金 < 10% 是否反脆弱不足? DXY 当前走势?"
+  ]
+}
