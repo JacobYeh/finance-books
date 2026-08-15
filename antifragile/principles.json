@@ -2,45 +2,54 @@
   "book": "antifragile",
   "title": "反脆弱 (Nassim Taleb)",
   "source": "Antifragile (2012)",
+  "category": "antifragile",
   "core_principles": [
     {
       "id": "ANT-01",
-      "name": "杠铃策略 (90/10)",
-      "summary": "90% 极保守 + 10% 高风险. 避免中庸",
-      "trigger_keywords": ["杠铃", "barbell", "集中", "保守"],
-      "holding_signal": "中等风险配置 → 重新分配极端两极"
+      "name": "三元结构 (脆弱/强韧/反脆弱)",
+      "summary": "脆弱的反义词不是坚强, 是反脆弱. 脆弱=凹性(冲击越强伤害越大), 反脆弱=凸性(冲击越强益处越大)",
+      "trigger_keywords": ["脆弱", "强韧", "反脆弱", "波动", "冲击", "凸性", "凹性"],
+      "holding_signal": "持仓结构: 优先选择凸性敞口 (上行大下行小), 严格规避凹性敞口"
     },
     {
       "id": "ANT-02",
-      "name": "否定法优先",
-      "summary": "先想最坏亏损多少, 再想收益. 避免 > 追逐",
-      "trigger_keywords": ["下行", "亏损", "风险", "drawdown"],
-      "holding_signal": "杠杆/集中/不可逆仓位 → 减"
+      "name": "杠铃策略 (85/15)",
+      "summary": "85% 极保守 + 15% 高风险, 拒绝中等风险. 减少不利因素 > 增加有利因素",
+      "trigger_keywords": ["杠铃", "保守", "激进", "分散", "尾部风险"],
+      "holding_signal": "持仓结构: 极保守 (短债/现金) + 少量高赔率 (单只 ≤ 5%)"
     },
     {
       "id": "ANT-03",
-      "name": "可选择性 (option-like)",
-      "summary": "有限下行 + 不对称上行 = 反脆弱. 优于预测",
-      "trigger_keywords": ["期权", "不对称", "option"],
-      "holding_signal": "下行有限 + 上行大 → 加仓"
+      "name": "可选择性 (Option-like)",
+      "summary": "决策正确收益巨大, 错误损失有限. 不对称回报优先于预测",
+      "trigger_keywords": ["期权", "不对称", "可选择性", "open-ended"],
+      "holding_signal": "优先可选择性资产 (下行有限 + 上行无限)"
     },
     {
       "id": "ANT-04",
-      "name": "反脆弱 = 从波动获益",
-      "summary": "减少脆弱项 + 增加反脆弱项",
-      "trigger_keywords": ["波动", "volatility", "脆弱"],
-      "holding_signal": "波动期 → 反脆弱仓位应得益"
+      "name": "否定法 (Via Negativa)",
+      "summary": "通过消除坏因素而非增加好因素获取反脆弱. 减法 > 加法",
+      "trigger_keywords": ["否定法", "避免损失", "减法", "禁忌"],
+      "holding_signal": "持仓: 先删价值陷阱 / 高杠杆 / 夕阳行业, 再考虑加仓"
     },
     {
       "id": "ANT-05",
-      "name": "美元强弱 → 黄金反向",
-      "summary": "美元强 = 黄金弱 / 美元弱 = 黄金强",
-      "trigger_keywords": ["美元", "DXY", "黄金", "gold"],
+      "name": "美元/黄金反向 + DXY 监控",
+      "summary": "美元强=黄金弱, 反之亦然. 关注 DXY 走势调整黄金配置",
+      "trigger_keywords": ["美元", "DXY", "黄金"],
       "holding_signal": "DXY 走强 → 减黄金; DXY 走弱 → 增黄金"
+    },
+    {
+      "id": "ANT-06",
+      "name": "skin in the game",
+      "summary": "偏好管理层有大量股权的公司, 避免代理问题 (经理人受益但股东承担损失)",
+      "trigger_keywords": ["管理层", "持股", "代理人", "切身利害"],
+      "holding_signal": "选股: 偏好创始人/管理层持股 > 30% 的公司"
     }
   ],
   "daily_prompts": [
-    "我今天有没有加杠杆 / 集中单只 > 5%? 是否违反否定法?",
-    "黄金 < 10% 是否反脆弱不足? DXY 当前走势?"
+    "我持仓里有没有凹性敞口 (高杠杆/夕阳行业) 应该先减?",
+    "杠铃结构: 现金 + 短债占比 ?%, 高赔率单只占比 ?%",
+    "DXY 当前走势? 我的黄金配置是否需要调整?"
   ]
 }

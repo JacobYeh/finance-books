@@ -1,0 +1,62 @@
+{
+  "book": "thinking-fast-and-slow",
+  "title": "思考, 快与慢 (Daniel Kahneman)",
+  "source": "Thinking, Fast and Slow (2011)",
+  "category": "psychology",
+  "core_principles": [
+    {
+      "id": "TFS-01",
+      "name": "双系统思维 (System 1 / System 2)",
+      "summary": "系统1=快速直觉 (情绪化, 自动), 系统2=慢速理性 (需努力). 投资决策须系统2 复核系统1 冲动",
+      "trigger_keywords": ["系统1", "系统2", "直觉", "理性"],
+      "holding_signal": "决策: 重大仓位变化前强制系统2复核 (写下来 vs 仅'感觉')"
+    },
+    {
+      "id": "TFS-02",
+      "name": "损失厌恶 (Loss Aversion 2:1)",
+      "summary": "失去的痛苦 ≈ 2x 得到的快乐. 导致处置效应 (不愿卖亏损) + 禀赋效应 (高估自己的持仓)",
+      "trigger_keywords": ["损失厌恶", "禀赋效应", "处置效应"],
+      "holding_signal": "持仓: 入场前预设止损价位 (机械化, 不让情绪决策)"
+    },
+    {
+      "id": "TFS-03",
+      "name": "过度自信 + 小数定律",
+      "summary": "小样本结果被过度放大. 1 只基金连续涨 3 年 ≠ 通用策略",
+      "trigger_keywords": ["过度自信", "小数定律", "小样本"],
+      "holding_signal": "决策: 业绩归因时小样本结果不可外推, 仓位规模与置信度匹配"
+    },
+    {
+      "id": "TFS-04",
+      "name": "锚定效应 (Anchoring)",
+      "summary": "决策被无关数字锚定 (历史高点/买入价/目标价). 导致'必须回本'心态",
+      "trigger_keywords": ["锚定", "锚定效应", "回本"],
+      "holding_signal": "决策: 当前持仓决策 vs 买入价无关, 只看当前价值"
+    },
+    {
+      "id": "TFS-05",
+      "name": "回归均值 (Regression to Mean)",
+      "summary": "极端表现无论好坏都会向均值回归. 明星基金/经理过往业绩不应线性外推",
+      "trigger_keywords": ["回归均值", "均值回归", "极端表现"],
+      "holding_signal": "决策: 看好某基金时, 优先看 5-10 年长期表现 vs 短期爆发"
+    },
+    {
+      "id": "TFS-06",
+      "name": "前景理论 + 心理账户",
+      "summary": "人们用参照点评估结果, 不看绝对值. 心理账户导致次优决策",
+      "trigger_keywords": ["前景理论", "心理账户", "参照点"],
+      "holding_signal": "决策: 用投资组合整体 vs 单笔交易评估风险收益"
+    },
+    {
+      "id": "TFS-07",
+      "name": "事前验尸 (Premortem)",
+      "summary": "大额决策前主动列'为什么会失败'. 主动寻求反对意见, 而非被支持",
+      "trigger_keywords": ["事前验尸", "反对意见", "逆向"],
+      "holding_signal": "决策: 大额建仓前花 10 分钟列 5 个失败原因"
+    }
+  ],
+  "daily_prompts": [
+    "今天的买卖决定是直觉 (系统1) 还是分析 (系统2)? (TFS-01)",
+    "我有没有被买入价锚定, 不愿卖亏损仓位? (TFS-04)",
+    "我看好某基金是 1 年爆发还是 5-10 年长期? (TFS-05)"
+  ]
+}
