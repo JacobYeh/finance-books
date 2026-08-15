@@ -1,0 +1,58 @@
+name: Sync books → finance-stack
+
+# 当 books repo push 时, 自动更新 finance-stack 的 submodule 指针
+# 触发方式: push 到 main → finance-stack 创建 sync PR
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'permanent-portfolio/**'
+      - 'antifragile/**'
+      - 'buffett-letters/**'
+      - 'README.md'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout finance-stack
+        uses: actions/checkout@v4
+        with:
+          repository: JacobYeh/finance-stack
+          token: ${{ secrets.FINANCE_STACK_PAT }}
+          path: finance-stack
+          submodules: true
+
+      - name: Configure git
+        run: |
+          cd finance-stack
+          git config user.email "finance-stack-bot@users.noreply.github.com"
+          git config user.name "finance-stack-bot"
+
+      - name: Update submodule pointer
+        run: |
+          cd finance-stack
+          # 把当前 finance-books commit 同步到 submodule
+          git submodule update --remote skills/finance-advisor/memory/books
+
+          # 检查是否有变化
+          if [[ -z $(git diff --name-only skills/finance-advisor/memory/books) ]]; then
+            echo "No submodule update needed"
+            exit 0
+          fi
+
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.FINANCE_STACK_PAT }}
+        run: |
+          cd finance-stack
+          git checkout -b books/sync-$(date +%s)
+          git add skills/finance-advisor/memory/books
+          git commit -m "chore(submodule): sync books from finance-books $(git rev-parse --short HEAD:skills/finance-advisor/memory/books)"
+          git push origin books/sync-$(date +%s)
+          gh pr create \
+            --title "📚 Books sync from finance-books" \
+            --body "Auto-generated from finance-books push. Review and merge if principles look good." \
+            --base master \
+            --head books/sync-$(date +%s) || echo "PR may already exist"
